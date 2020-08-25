@@ -1,0 +1,25 @@
+.root {
+  margin: auto;
+  max-width: 1120px;
+}
+
+.root .panel {
+  margin: 50px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.root .panel .link {
+  text-decoration: none;
+}
+
+.root .tutors {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+/*# sourceMappingURL=style.module.css.map */

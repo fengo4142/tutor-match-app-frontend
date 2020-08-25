@@ -1,0 +1,8 @@
+.tutors {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  max-width: 1120px;
+}
+/*# sourceMappingURL=style.module.css.map */

@@ -1,0 +1,19 @@
+{
+  "package.json": [
+    "prettier-package-json --write",
+    "git add"
+  ],
+  "*.{js}": [
+    "eslint --fix",
+    "prettier --write",
+    "git add"
+  ],
+  "*.{ts,tsx}": [
+    "eslint --fix",
+    "git add"
+  ],
+  "*.{css,md,mdx}": [
+    "npm run prettify --write",
+    "git add"
+  ]
+}
