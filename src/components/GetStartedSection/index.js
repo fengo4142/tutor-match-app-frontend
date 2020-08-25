@@ -4,6 +4,8 @@ import { Jumbotron, Button } from 'reactstrap';
 import style from './style.module.scss';
 
 const GetStartedSection = (props) => {
+  const { onStart } = props;
+
   return (
     <div>
       <Jumbotron className={style.jumbotron}>
@@ -12,7 +14,7 @@ const GetStartedSection = (props) => {
           <p className="lead">The place where students and tutors meet.</p>
         </div>
         <p className="lead">
-          <Button color="primary" onClick={props.onStart}>Get started Now</Button>
+          <Button color="primary" onClick={onStart}>Get started Now</Button>
         </p>
       </Jumbotron>
     </div>

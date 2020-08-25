@@ -1,10 +1,9 @@
 
 import React from 'react';
 import {
-  Card, CardImg, CardText, CardBody,
-  CardTitle, CardSubtitle, Button
+  Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle, Button
 } from 'reactstrap';
-import { ReactComponent as TutorPhoto } from 'resources/images/user-photo.svg';
+import { ReactComponent as TutorPhoto } from '../../resources/images/user-photo.svg';
 
 import style from './style.module.scss'
 
@@ -19,7 +18,7 @@ const TutorCard = (props) => {
           <CardTitle>{props.name}</CardTitle>
           <hr />
           <CardSubtitle>{props.email}</CardSubtitle>
-          <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
+          <CardText>Responsible for helping students to understand different subjects. They assess, assist and encourage the students in the learning processes.</CardText>
           <Button>View Detail</Button>
         </CardBody>
       </Card>

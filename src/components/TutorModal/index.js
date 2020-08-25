@@ -1,6 +1,8 @@
 import React from 'react'
 import moment from 'moment'
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Form, FormGroup, Col, Label, Input } from 'reactstrap'
+import { 
+  Button, Modal, ModalHeader, ModalBody, ModalFooter, Form, FormGroup, Col, Label, Input
+} from 'reactstrap'
 
 const TutorModal = (props) => {
 
@@ -14,7 +16,6 @@ const TutorModal = (props) => {
   
   const onSubmitHandler = (event) => {
     event.preventDefault();
-    
     const formData = new FormData(event.target)
     // @ts-ignore
     const payload = Object.fromEntries(formData)
@@ -26,7 +27,7 @@ const TutorModal = (props) => {
   return (
     <div>
       <Modal isOpen={modal} fade={false} toggle={onToggle} className={className}>
-        <Form onSubmit={onSubmitHandler}>
+        <Form onSubmit={onSubmitHandler} className="form">
           <ModalHeader toggle={onToggle}>Tutor</ModalHeader>
           <ModalBody>
             <FormGroup row>

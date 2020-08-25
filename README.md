@@ -1,4 +1,4 @@
-# Wall app frontend
+# Tutor Match app frontend
 
 ## Project Setup
 
@@ -7,11 +7,12 @@
 - Create-React-App
 - Redux Saga
 - Reactstrap, SCSS
+- Unit Test (Jest)
 
 ### Prerequisites
 
 ```
-node v8^
+node v12^
 npm
 yarn
 ```
@@ -34,6 +35,7 @@ yarn start
 
 - `yarn start` - Runs the app in the development mode.
 - `yarn build` - Builds the app for production to the build folder.
+- `yarn test` - Runs the unit tests.
 
 
 ## Code standard

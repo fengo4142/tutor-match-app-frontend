@@ -1,20 +1,20 @@
 import React, { useEffect, useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import tutorActions from 'redux/tutor/actions'
 import { Table } from 'reactstrap'
 import { Link } from 'react-router-dom'
 
-import Button from 'components/Button'
-import GeneralModal from 'components/GeneralModal'
+import tutorActions from '../../redux/tutor/actions'
+import Button from '../../components/Button'
+import GeneralModal from '../../components/GeneralModal'
+import TutorModal from '../../components/TutorModal'
 
 import style from './style.module.scss'
-import TutorModal from 'components/TutorModal'
 
 const Tutor = () => {
   const [tutor, setTutor] = useState(null)
   const [modal, setModal] = useState(false)
   const [confirm, setConfirm] = useState(false)
-  const {tutors} = useSelector(state => state.Tutor)
+  const { tutors } = useSelector(state => state.Tutor)
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -37,7 +37,7 @@ const Tutor = () => {
   const onToggleConfirm = (tutor) => {
     setTutor(tutor)
     setConfirm(!confirm)
-  }
+  } 
 
   const onRemoveTutor = () => {
     dispatch(tutorActions.deleteRequest(tutor))
@@ -47,10 +47,10 @@ const Tutor = () => {
     <div className={style.root}>
       <div className={style.panel}>
         <Link className={style.link} to="/">&lt; Home</Link>
-        <Button onClick={e => onToggleTutor(null) }>New</Button>
+        <Button className="btn-create" onClick={e => onToggleTutor(null) }>New</Button>
       </div>
       <div className={style.tutors}>
-        <Table size="md">
+        <Table size="md" className="table">
           <thead>
             <tr>
               <th>No</th>
@@ -69,8 +69,8 @@ const Tutor = () => {
                   <td>{tutor.lastName}</td>
                   <td>{tutor.email}</td>
                   <td>
-                    <Button color="link" onClick={e => onToggleTutor(tutor)}>Edit</Button>
-                    <Button color="link" onClick={e => onToggleConfirm(tutor)}>Remove</Button>
+                    <Button className="btn-edit" color="link" onClick={e => onToggleTutor(tutor)}>Edit</Button>
+                    <Button className="btn-delete" color="link" onClick={e => onToggleConfirm(tutor)}>Remove</Button>
                   </td>
                 </tr>
               )}
@@ -79,13 +79,15 @@ const Tutor = () => {
         </Table>
       </div>
 
-      <TutorModal 
+      <TutorModal
+        className="tutor-modal"
         modal={modal} 
         tutor={tutor} 
         onToggle={onToggleTutor} 
         onSubmit={onSubmitTutor} />
 
-      <GeneralModal 
+      <GeneralModal
+        className="confirm-modal"
         modal={confirm}
         message="Are you sure to perform this action?"
         title="Confirm"
