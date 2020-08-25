@@ -37,6 +37,7 @@ yarn start
 - `yarn build` - Builds the app for production to the build folder.
 - `yarn test` - Runs the unit tests.
 
+By default, it starts at port 3000, http://localhost:3000
 
 ## Code standard
 
